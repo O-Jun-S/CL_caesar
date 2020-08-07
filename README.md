@@ -8,9 +8,9 @@ $ clisp
 (load "solver.lisp")
 
 # If you want to ignore some string, use add-ignore function.
-# ignore "{" and "}".
-(add-ignore "{}")
+# ignore "I" and "j".
+(add-ignore "Ij")
 
-(solve "FLAG{testflag}" -3)
-CI>D{qbpqci^d}  # stdout
+(solve "abCdefGXyZ" 10)
+-> klMnopQHiJ (stdout)
 ```
