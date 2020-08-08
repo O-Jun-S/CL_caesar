@@ -1,15 +1,15 @@
-; 文字列をASCIIのリストへ。
+; String to ascii list.
 (defun str-code (str)
   (mapcar #'char-code
   (coerce str 'list)))
 
-; ASCIIのリストを文字列に。
+; Ascii list to string.
 (defun dec-code (asc)
   (coerce (mapcar #'code-char
           asc)
   'string))
 
-; 無視する文字のASCIIは無視して計算。
+; String shift function.
 (defun ascii-shift (lst val)
   (mapcar 
     (lambda (chr)
@@ -29,18 +29,17 @@
             (t chr)))
     lst))
 
-; strをval文字ずらす。
+; Shift str for val.
 (defun solve (str val)
   (princ (dec-code (ascii-shift (str-code str) val))))
 
-; strを1から26文字ずらした結果を表示
+; Shift str from 1 to 26.
 (defun solve-all (str)
   (let ((ascii (str-code str)))
     (loop for i
           from 1
           below 26
-          do(progn
-              ;何文字ずらしたか
+          do(progn;
               (princ i)
               (princ ">> ")
 
