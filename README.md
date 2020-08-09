@@ -43,3 +43,48 @@ If you are going to solve long caesar-crypto.
 Run solve-all with a word of the passage.
 Then a correct word will be appear.
 Then run solve with the passage, and line number that the word was appear.
+
+```common-lisp:REPL
+; If you are going to solve "Pdana wna pdnaa wllhao.".
+; Pickup a word. Pick "wllhao" now.
+(solve-all "wllhao")
+```
+returns
+```
+1>> xmmibp
+2>> ynnjcq
+3>> zookdr
+4>> apples
+5>> bqqmft
+6>> crrngu
+7>> dssohv
+8>> ettpiw
+9>> fuuqjx
+10>> gvvrky
+11>> hwwslz
+12>> ixxtma
+13>> jyyunb
+14>> kzzvoc
+15>> laawpd
+16>> mbbxqe
+17>> nccyrf
+18>> oddzsg
+19>> peeath
+20>> qffbui
+21>> rggcvj
+22>> shhdwk
+23>> tiiexl
+24>> ujjfym
+25>> vkkgzn
+```
+
+"apples" at line 4th is correct word.
+Correct passage will be appear when shift passage 4 letters.
+
+```common-list:REPL
+(solve "Pdana wna pdnaa wllhao." 4)
+```
+returns
+```
+There are three apples.
+```
